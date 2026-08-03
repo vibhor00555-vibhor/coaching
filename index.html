@@ -1404,6 +1404,7 @@
                 within one business day.</p>
 
               <form class="consult-form" id="consultForm" aria-labelledby="consult-heading" novalidate>
+                <input type="hidden" name="access_key" value="d08ae16e-de64-49a9-a73a-2b449ab458a4">
                 <div class="field-row">
                   <div class="field" id="f-name">
                     <label for="cf-name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -1853,8 +1854,8 @@
        *   Web3Forms   https://web3forms.com  ->  'https://api.web3forms.com/submit'
        *                                          (also add your access_key below)
        */
-      var ENDPOINT = '';          // e.g. 'https://formspree.io/f/abcdwxyz'
-      var WEB3FORMS_KEY = '';     // only needed if using Web3Forms
+      var ENDPOINT = 'https://api.web3forms.com/submit';
+      var WEB3FORMS_KEY = 'd08ae16e-de64-49a9-a73a-2b449ab458a4';
       var WHATSAPP_NUMBER = '918112236130';
 
       var form = document.getElementById('consultForm');
