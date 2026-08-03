@@ -1958,9 +1958,20 @@
         if (ENDPOINT) {
           btn.disabled = true;
           btn.textContent = 'Sending...';
-          var payload = Object.assign({}, d);
-          delete payload.website;
-          if (WEB3FORMS_KEY) payload.access_key = WEB3FORMS_KEY;
+
+          var payload = {
+            access_key: WEB3FORMS_KEY,
+            subject: 'Free Consultation — ' + d.subject,
+            from_name: d.name,
+            replyto: d.email,
+            Name: d.name,
+            Email: d.email,
+            Phone: d.phone || 'Not provided',
+            Subject: d.subject
+          };
+          if (d.message) {
+            payload.Message = d.message;
+          }
 
           fetch(ENDPOINT, {
             method: 'POST',
@@ -2033,3 +2044,4 @@
 </body>
 
 </html>
+
