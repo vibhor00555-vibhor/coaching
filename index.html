@@ -1083,6 +1083,15 @@
       transition: all 0.2s ease;
     }
 
+ @media (max-width: 600px) {
+      .field input,
+      .field select,
+      .field textarea {
+        font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+        height: 44px; /* Touch-friendly tap target */
+      }
+    }
+
     .field input::placeholder,
     .field textarea::placeholder {
       color: #94A3B8;
