@@ -979,60 +979,63 @@
       line-height: 1.55;
     }
 
-    /* ===== PW Style Consultation Form ===== */
+    /* ===== PW Style Compact Consultation Form ===== */
     .lead-form-wrap {
       background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
-      border-radius: var(--radius-lg);
-      padding: 56px 44px;
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
       color: #fff;
-      box-shadow: 0 24px 60px -12px rgba(30, 27, 75, 0.4);
+      box-shadow: 0 16px 40px -8px rgba(30, 27, 75, 0.35);
       position: relative;
       overflow: hidden;
+      max-width: 580px;
+      margin: 0 auto;
     }
 
     @media (max-width: 640px) {
       .lead-form-wrap {
-        padding: 32px 20px;
+        padding: 22px 16px;
       }
     }
 
     .lead-form-wrap::before {
       content: '';
       position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(255, 184, 0, 0.18) 0%, transparent 70%);
+      top: -40px;
+      right: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255, 184, 0, 0.15) 0%, transparent 70%);
       pointer-events: none;
     }
 
     .lead-form-header {
       text-align: center;
-      margin-bottom: 36px;
+      margin-bottom: 20px;
     }
 
     .lead-form-header h2 {
       color: #fff;
-      font-size: clamp(1.8rem, 3.8vw, 2.4rem);
-      margin-bottom: 10px;
+      font-size: clamp(1.4rem, 2.8vw, 1.7rem);
+      margin-bottom: 6px;
     }
 
     .lead-form-header p {
       color: #C7D2FE;
-      font-size: 1rem;
-      max-width: 580px;
+      font-size: 0.88rem;
+      max-width: 480px;
       margin: 0 auto;
+      line-height: 1.45;
     }
 
     .form-grid-2col {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
+      gap: 12px;
+      margin-bottom: 12px;
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: 600px) {
       .form-grid-2col {
         grid-template-columns: 1fr 1fr;
       }
@@ -1041,8 +1044,8 @@
     .field {
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      margin-bottom: 16px;
+      gap: 4px;
+      margin-bottom: 12px;
       position: relative;
     }
 
@@ -1051,7 +1054,7 @@
     }
 
     .field label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #E0E7FF;
       display: flex;
@@ -1068,9 +1071,9 @@
     .field select,
     .field textarea {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.95rem;
-      padding: 0 14px;
-      height: 48px;
+      font-size: 0.88rem;
+      padding: 0 12px;
+      height: 42px;
       border-radius: var(--radius-sm);
       border: 1.5px solid rgba(255, 255, 255, 0.18);
       background: rgba(255, 255, 255, 0.08);
@@ -1078,14 +1081,6 @@
       width: 100%;
       box-sizing: border-box;
       transition: all 0.2s ease;
-    }
-
-    .field textarea {
-      padding: 12px 14px;
-      resize: vertical;
-      min-height: 80px;
-      height: auto;
-      line-height: 1.5;
     }
 
     .field input::placeholder,
@@ -1110,14 +1105,15 @@
 
     .phone-input-wrap {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       width: 100%;
     }
 
     .phone-input-wrap select {
-      width: 104px;
-      flex: 0 0 104px;
-      padding: 0 8px;
+      width: 95px;
+      flex: 0 0 95px;
+      padding: 0 6px;
+      font-size: 0.82rem;
     }
 
     .phone-input-wrap input {
@@ -1126,7 +1122,7 @@
     }
 
     .field .error-text {
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: #FFA3A3;
       display: none;
       margin-top: 2px;
@@ -1151,40 +1147,21 @@
       overflow: hidden;
     }
 
-    .form-buttons-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-
-    .form-buttons-row .btn-primary {
-      flex: 1 1 200px;
+    .lead-form-wrap .btn-primary {
+      width: 100%;
       background: var(--pw-accent-yellow);
       color: var(--pw-secondary) !important;
       font-weight: 800;
-      padding: 16px 32px;
-      font-size: 1.05rem;
-      border-radius: var(--radius-md);
-      box-shadow: 0 6px 20px rgba(255, 184, 0, 0.4);
+      padding: 13px 24px;
+      font-size: 0.98rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 16px rgba(255, 184, 0, 0.35);
+      cursor: pointer;
     }
 
-    .form-buttons-row .btn-primary:hover {
+    .lead-form-wrap .btn-primary:hover {
       background: #FFCA28;
       transform: translateY(-2px);
-    }
-
-    .form-buttons-row .btn-secondary {
-      background: transparent;
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      color: #fff;
-      padding: 16px 24px;
-    }
-
-    .form-buttons-row .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #fff;
     }
 
     .form-status {
@@ -1507,7 +1484,7 @@
   <header class="site">
     <nav class="wrap" aria-label="Main Navigation">
       <a href="#top" class="brand" aria-label="Triton Learning Academy Home">
-       <img src="./assets/logo-mark.png" alt="Triton Learning Academy Logo" class="brand-mark">
+        <img src="./assets/logo-mark.png" alt="Triton Learning Academy Logo" class="brand-mark">
         <span class="brand-text">
           <span class="name">TRITON</span>
           <span class="sub">LEARNING ACADEMY</span>
@@ -1602,7 +1579,7 @@
 
           <div class="hero-visual reveal">
             <div class="hero-visual-card">
-             <img src="./assets/hero-students.png" alt="Triton Learning Academy Students">
+              <img src="./assets/hero-students.png" alt="Triton Learning Academy Students">
               <div class="hero-floating-stat">
                 <div class="hero-stat-circle">★</div>
                 <div class="hero-stat-info">
@@ -1658,62 +1635,68 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT US & CORE PHILOSOPHY ===== -->
+    <!-- ===== ABOUT US & WHY TRITON SECTION ===== -->
     <section class="section" id="about">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="section-badge">About Us</span>
-          <h2>The Triton Philosophy: Mastery Over Memorization</h2>
-          <p>We combine rigorous academic standards with empathetic 1-on-1 mentorship to turn challenging STEM subjects into lifelong strengths.</p>
+          <span class="section-badge">Why Choose Us</span>
+          <h2>Why Triton Learning Academy</h2>
+          <p>We combine rigorous academic standards with empathetic 1-on-1 mentorship to turn challenging STEM concepts into lasting understanding, stronger problem-solving skills, and academic confidence.</p>
         </div>
 
         <div class="pillars-grid reveal">
-          <div class="pillar-card">
-            <div class="pillar-icon-box" style="background:#EEF0FF; color:var(--pw-primary);">
-              💡
-            </div>
-            <h4>Intuitive Concept Frameworks</h4>
-            <p>We teach first principles. Students learn <em>why</em> formulas work through visual proofs, real-world analogies, and interactive whiteboard problem solving.</p>
-          </div>
-
+          <!-- Point 1 -->
           <div class="pillar-card">
             <div class="pillar-icon-box" style="background:#FEF3C7; color:#D97706;">
               🎯
             </div>
-            <h4>Personalized Learning Path</h4>
-            <p>Every student begins with a comprehensive diagnostic test. We then tailor weekly lessons, homework support, and exam drills to match their school syllabus.</p>
+            <h4>Personalized 1-on-1 Learning</h4>
+            <p>Every session is tailored to your child’s pace, needs, and goals—with focused attention on identifying learning gaps, strengthening fundamentals, and building confidence.</p>
           </div>
 
+          <!-- Point 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="background:#EEF0FF; color:var(--pw-primary);">
+              🎓
+            </div>
+            <h4>Experienced &amp; Carefully Selected Tutors</h4>
+            <p>Our tutors bring K–12 teaching experience and undergo a rigorous selection process assessing subject knowledge, problem-solving, communication, and teaching ability.</p>
+          </div>
+
+          <!-- Point 3 -->
           <div class="pillar-card">
             <div class="pillar-icon-box" style="background:#ECFDF5; color:#059669;">
-              📈
+              📚
             </div>
-            <h4>Transparent Progress Analytics</h4>
-            <p>Parents receive regular performance summaries, quiz score reports, and actionable feedback after each key topic is mastered.</p>
+            <h4>Aligned With Your Child’s School Curriculum</h4>
+            <p>We follow the same curriculum and topics taught at your child’s school, helping reinforce classroom learning, clarify concepts, and keep students on track.</p>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-icon-box" style="background:#FEE2E2; color:#DC2626;">
-              🏆
-            </div>
-            <h4>Proven AP Exam Prep</h4>
-            <p>Targeting 5/5 on AP exams with curated past paper question banks, College Board scoring rubrics, and timed mock tests.</p>
-          </div>
-
+          <!-- Point 4 -->
           <div class="pillar-card">
             <div class="pillar-icon-box" style="background:#F3E8FF; color:#7C3AED;">
-              💻
+              👨‍🏫
             </div>
-            <h4>Future-Ready Tech Skills</h4>
-            <p>Hands-on Python, SQL, and Data Analytics modules that bridge mathematical theory with real-world computational problem solving.</p>
+            <h4>The Same Tutor, Every Class</h4>
+            <p>Your child learns with the same dedicated tutor, enabling them to understand their strengths, identify areas for improvement, and build a strong teacher-student relationship.</p>
           </div>
 
+          <!-- Point 5 -->
           <div class="pillar-card">
             <div class="pillar-icon-box" style="background:#E0F2FE; color:#0284C7;">
-              🌍
+              🕐
             </div>
-            <h4>Global Timezone Flexibility</h4>
-            <p>Convenient evening and weekend class slots for students across PST, MST, CST, EST, GMT, and international time zones.</p>
+            <h4>Flexible Scheduling</h4>
+            <p>We work around your child’s school, extracurricular activities, and family schedule, making it easier to maintain a consistent tutoring routine.</p>
+          </div>
+
+          <!-- Point 6 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box" style="background:#FDF2F8; color:#DB2777;">
+              📖
+            </div>
+            <h4>Curated Practice &amp; Learning Materials</h4>
+            <p>Students receive thoughtfully selected practice materials, worksheets, and additional resources to reinforce concepts, practice independently, and strengthen their understanding beyond each session.</p>
           </div>
         </div>
       </div>
@@ -1920,39 +1903,32 @@
           </div>
         </div>
 
-        <!-- PW STYLE CONSULTATION CARD -->
+        <!-- PW STYLE COMPACT CONSULTATION CARD -->
         <div class="lead-form-wrap reveal" id="consultFormCard">
           <div class="lead-form-header">
-            <h2>Schedule Your Free Consultation &amp; Demo</h2>
-            <p>Tell us about your student's grade and goals. Our academic coordinators will design a customized learning roadmap.</p>
+            <h2>Book a Free Demo Class</h2>
+            <p>Fill out this quick form &amp; our academic team will reach out within 24 hours.</p>
           </div>
 
           <form class="consult-form" id="consultForm" novalidate>
             <input type="hidden" name="access_key" value="d08ae16e-de64-49a9-a73a-2b449ab458a4">
 
-            <!-- Row 1: Names -->
-            <div class="form-grid-2col">
-              <div class="field" id="f-first-name">
-                <label for="cf-first-name">First Name <span class="req">*</span></label>
-                <input type="text" id="cf-first-name" name="first_name" autocomplete="given-name" required placeholder="e.g. Sarah">
-                <span class="error-text">Please enter your first name.</span>
-              </div>
-              <div class="field" id="f-last-name">
-                <label for="cf-last-name">Last Name <span class="req">*</span></label>
-                <input type="text" id="cf-last-name" name="last_name" autocomplete="family-name" required placeholder="e.g. Jenkins">
-                <span class="error-text">Please enter your last name.</span>
-              </div>
+            <!-- Full Name -->
+            <div class="field" id="f-name">
+              <label for="cf-name">Student / Parent Name <span class="req">*</span></label>
+              <input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="e.g. Sarah Jenkins">
+              <span class="error-text">Please enter your name.</span>
             </div>
 
-            <!-- Row 2: Email & Phone -->
+            <!-- Email & Phone in 1 row -->
             <div class="form-grid-2col">
               <div class="field" id="f-email">
-                <label for="cf-email">Parent / Student Email <span class="req">*</span></label>
+                <label for="cf-email">Email Address <span class="req">*</span></label>
                 <input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="name@example.com">
-                <span class="error-text">Please enter a valid email address.</span>
+                <span class="error-text">Please enter a valid email.</span>
               </div>
               <div class="field" id="f-phone">
-                <label for="cf-phone">Phone / WhatsApp Number</label>
+                <label for="cf-phone">Phone / WhatsApp</label>
                 <div class="phone-input-wrap">
                   <select id="cf-country-code" name="country_code" aria-label="Country Dial Code">
                     <option value="+1" selected>🇺🇸 +1</option>
@@ -1970,41 +1946,12 @@
               </div>
             </div>
 
-            <!-- Row 3: City & State -->
+            <!-- Grade & Subject in 1 row -->
             <div class="form-grid-2col">
-              <div class="field" id="f-city">
-                <label for="cf-city">City</label>
-                <input type="text" id="cf-city" name="city" placeholder="e.g. San Jose, Dallas, London">
-              </div>
-              <div class="field" id="f-state">
-                <label for="cf-state">State / Province</label>
-                <input type="text" id="cf-state" name="state" placeholder="e.g. California, Texas, Ontario">
-              </div>
-            </div>
-
-            <!-- Row 4: Country & Grade -->
-            <div class="form-grid-2col">
-              <div class="field" id="f-country">
-                <label for="cf-country">Country <span class="req">*</span></label>
-                <select id="cf-country" name="country" required>
-                  <option value="">-- Select Country --</option>
-                  <option value="United States" selected>United States</option>
-                  <option value="Canada">Canada</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="India">India</option>
-                  <option value="United Arab Emirates">United Arab Emirates</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Germany">Germany</option>
-                  <option value="France">France</option>
-                  <option value="Other">Other</option>
-                </select>
-                <span class="error-text">Please select your country.</span>
-              </div>
               <div class="field" id="f-student-grade">
-                <label for="cf-student-grade">Student Grade Level (K–12)</label>
-                <select id="cf-student-grade" name="student_grade">
-                  <option value="">-- Select Grade Level --</option>
+                <label for="cf-student-grade">Grade Level <span class="req">*</span></label>
+                <select id="cf-student-grade" name="student_grade" required>
+                  <option value="">-- Select Grade --</option>
                   <option value="Grade 6">Grade 6 (Middle School)</option>
                   <option value="Grade 7">Grade 7 (Middle School)</option>
                   <option value="Grade 8">Grade 8 (Middle School)</option>
@@ -2012,21 +1959,14 @@
                   <option value="Grade 10">Grade 10 (High School Sophomore)</option>
                   <option value="Grade 11">Grade 11 (High School Junior)</option>
                   <option value="Grade 12">Grade 12 (High School Senior)</option>
-                  <option value="College / AP Prep">College / Advanced AP Prep</option>
+                  <option value="AP Prep / Coding">AP Prep / Programming</option>
                 </select>
+                <span class="error-text">Please select a grade.</span>
               </div>
-            </div>
-
-            <!-- Row 5: Subjects Needed -->
-            <div class="field" id="f-needed-subjects">
-              <label for="cf-needed-subjects">Subjects &amp; Focus (e.g. Algebra 1, AP Statistics, Python)</label>
-              <input type="text" id="cf-needed-subjects" name="needed_subjects" placeholder="e.g. Pre-Calculus, AP Microeconomics, Python Programming">
-            </div>
-
-            <!-- Row 6: Goals / Notes -->
-            <div class="field" id="f-notes">
-              <label for="cf-notes">Specific Learning Goals or Questions</label>
-              <textarea id="cf-notes" name="notes" rows="3" placeholder="Tell us about the student's current challenges, upcoming exams, or preferred days/times for sessions..."></textarea>
+              <div class="field" id="f-needed-subjects">
+                <label for="cf-needed-subjects">Subject / Topic</label>
+                <input type="text" id="cf-needed-subjects" name="needed_subjects" placeholder="e.g. Algebra 1, AP Stats, Python">
+              </div>
             </div>
 
             <!-- Honeypot -->
@@ -2035,21 +1975,20 @@
               <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <!-- Buttons -->
-            <div class="form-buttons-row">
-              <button type="submit" class="btn btn-primary" id="submitBtn">
-                <span>Book Free Consultation</span>
+            <!-- Submit Button -->
+            <div style="margin-top:14px;">
+              <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;">
+                <span>Book Free Demo Class</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </button>
-              <button type="reset" id="resetBtn" class="btn btn-secondary">Reset Form</button>
             </div>
 
             <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
 
             <p class="form-note">
-              🔒 Your privacy is 100% protected. We never sell or share your contact details.
+              🔒 100% Free Consultation. No payment or credit card required.
             </p>
           </form>
         </div>
@@ -2271,17 +2210,14 @@
         var ok = true;
         var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email);
 
-        markInvalid('f-first-name', !data.first_name);
-        if (!data.first_name) ok = false;
-
-        markInvalid('f-last-name', !data.last_name);
-        if (!data.last_name) ok = false;
+        markInvalid('f-name', !data.name);
+        if (!data.name) ok = false;
 
         markInvalid('f-email', !emailOk);
         if (!emailOk) ok = false;
 
-        markInvalid('f-country', !data.country);
-        if (!data.country) ok = false;
+        markInvalid('f-student-grade', !data.student_grade);
+        if (!data.student_grade) ok = false;
 
         return ok;
       }
@@ -2289,33 +2225,24 @@
       function composeWhatsAppMessage(d) {
         var fullPhone = (d.country_code ? d.country_code + ' ' : '') + d.phone;
         return 'Hello Triton Learning Academy,\n\n'
-          + 'I would like to book a Free Demo / 1:1 Consultation.\n\n'
-          + '• Name: ' + d.first_name + ' ' + d.last_name + '\n'
+          + 'I would like to book a Free Demo Class / 1:1 Consultation.\n\n'
+          + '• Name: ' + d.name + '\n'
           + '• Email: ' + d.email + '\n'
           + (d.phone ? '• Phone: ' + fullPhone + '\n' : '')
-          + (d.city ? '• City: ' + d.city + '\n' : '')
-          + (d.state ? '• State: ' + d.state + '\n' : '')
-          + '• Country: ' + d.country + '\n'
           + (d.student_grade ? '• Grade: ' + d.student_grade + '\n' : '')
-          + (d.needed_subjects ? '• Subjects Needed: ' + d.needed_subjects + '\n' : '')
-          + (d.notes ? '• Notes: ' + d.notes + '\n' : '');
+          + (d.needed_subjects ? '• Subject / Focus: ' + d.needed_subjects + '\n' : '');
       }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         var d = {
-          first_name: form.first_name.value.trim(),
-          last_name: form.last_name.value.trim(),
+          name: form.name.value.trim(),
           email: form.email.value.trim(),
           country_code: form.country_code ? form.country_code.value : '',
           phone: form.phone ? form.phone.value.trim() : '',
-          city: form.city ? form.city.value.trim() : '',
-          state: form.state ? form.state.value.trim() : '',
-          country: form.country ? form.country.value : '',
           student_grade: form.student_grade ? form.student_grade.value : '',
           needed_subjects: form.needed_subjects ? form.needed_subjects.value.trim() : '',
-          notes: form.notes ? form.notes.value.trim() : '',
           website: form.website ? form.website.value : ''
         };
 
@@ -2340,19 +2267,14 @@
 
         var payload = {
           access_key: WEB3FORMS_KEY,
-          subject: 'New Demo / Consultation Request — ' + d.first_name + ' ' + d.last_name + ' (' + (d.student_grade || 'Grade Not Specified') + ')',
-          from_name: d.first_name + ' ' + d.last_name,
+          subject: 'New Demo Request — ' + d.name + ' (' + (d.student_grade || 'Grade Not Specified') + ')',
+          from_name: d.name,
           replyto: d.email,
-          "First Name": d.first_name,
-          "Last Name": d.last_name,
+          "Student / Parent Name": d.name,
           "Email": d.email,
           "Phone": fullPhone || 'Not provided',
-          "City": d.city || 'Not provided',
-          "State": d.state || 'Not provided',
-          "Country": d.country,
           "Student Grade": d.student_grade || 'Not provided',
-          "Subjects Needed": d.needed_subjects || 'Not provided',
-          "Goals / Notes": d.notes || 'None'
+          "Subject / Focus": d.needed_subjects || 'General Tutoring'
         };
 
         fetch(ENDPOINT, {
@@ -2371,7 +2293,7 @@
             form.reset();
             var fields = form.querySelectorAll('.field');
             fields.forEach(function (f) { f.classList.remove('invalid'); });
-            showStatus('🎉 <b>Thank you, ' + d.first_name + '!</b> Your demo request was received successfully. Our academic advisor will contact you within 24 hours via email or WhatsApp.', 'ok');
+            showStatus('🎉 <b>Thank you, ' + d.name + '!</b> Your demo request was received successfully. Our academic advisor will contact you within 24 hours via email or WhatsApp.', 'ok');
           })
           .catch(function (err) {
             var text = composeWhatsAppMessage(d);
