@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" width="300" height="280">
+  <defs>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFBD00"/>
+      <stop offset="100%" stop-color="#E58E00"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0066CC"/>
+      <stop offset="100%" stop-color="#004499"/>
+    </linearGradient>
+    <linearGradient id="bookDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B2B5B"/>
+      <stop offset="100%" stop-color="#031027"/>
+    </linearGradient>
+    <linearGradient id="bookMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B3C78"/>
+      <stop offset="100%" stop-color="#051C3F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Star at Top -->
+  <polygon points="150,10 154.5,23.8 168,23.8 157,31.8 161.2,45 150,36.8 138.8,45 143,31.8 132,23.8 145.5,23.8" fill="url(#starGrad)"/>
+
+  <!-- Human Figure Head -->
+  <circle cx="150" cy="56" r="8.5" fill="url(#bodyGrad)"/>
+
+  <!-- Human Figure Body / Reaching Arms -->
+  <path d="M 150,116 C 147,95 130,68 116,55 C 128,68 139,85 143,102 C 146,115 149,145 150,172 C 151,145 154,115 157,102 C 161,85 172,68 184,55 C 170,68 153,95 150,116 Z" fill="url(#bodyGrad)"/>
+
+  <!-- Open Book Page 1 (Top Layer) -->
+  <path d="M 150,175 C 138,148 115,110 80,80 C 105,100 128,128 143,158 Z" fill="url(#bookMid)"/>
+  <path d="M 150,175 C 162,148 185,110 220,80 C 195,100 172,128 157,158 Z" fill="url(#bookMid)"/>
+
+  <!-- Open Book Page 2 (Middle Layer) -->
+  <path d="M 150,181 C 132,158 102,125 58,102 C 85,120 115,146 141,170 Z" fill="url(#bookDark)"/>
+  <path d="M 150,181 C 168,158 198,125 242,102 C 215,120 185,146 159,170 Z" fill="url(#bookDark)"/>
+
+  <!-- Open Book Page 3 (Bottom Base Layer) -->
+  <path d="M 150,186 C 126,168 88,138 38,122 C 68,138 102,160 138,179 Z" fill="url(#bookDark)"/>
+  <path d="M 150,186 C 174,168 212,138 262,122 C 232,138 198,160 162,179 Z" fill="url(#bookDark)"/>
+
+  <!-- Text TRITON -->
+  <text x="150" y="232" font-family="-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif" font-weight="900" font-size="34" fill="#0B2B5B" text-anchor="middle" letter-spacing="4">TRITON</text>
+
+  <!-- Text LEARNING ACADEMY -->
+  <text x="150" y="260" font-family="-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif" font-weight="700" font-size="14.5" fill="#0066CC" text-anchor="middle" letter-spacing="4.5">LEARNING ACADEMY</text>
+</svg>
