@@ -843,13 +843,26 @@
       flex-grow: 1;
     }
 
+    .program-features.grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 12px;
+    }
+
+    @media (max-width: 480px) {
+      .program-features.grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .program-features li {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 8px;
       font-size: 0.92rem;
       color: var(--pw-secondary);
       font-weight: 500;
+      line-height: 1.35;
     }
 
     .program-features li svg {
@@ -857,7 +870,7 @@
       height: 18px;
       color: var(--pw-accent-green);
       flex-shrink: 0;
-      margin-top: 2px;
+      margin-top: 1px;
     }
 
     .program-card-footer {
@@ -1493,7 +1506,7 @@
   <header class="site">
     <nav class="wrap" aria-label="Main Navigation">
       <a href="#top" class="brand" aria-label="Triton Learning Academy Home">
-        <img src="assets/logo-mark.png" alt="Triton Learning Academy Logo" class="brand-mark" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/logo.png';}">
+        <img src="assets/logo.png" alt="Triton Learning Academy Logo" class="brand-mark" style="height:48px;width:48px;border-radius:50%;object-fit:cover;flex-shrink:0;">
         <span class="brand-text">
           <span class="name">TRITON</span>
           <span class="sub">LEARNING ACADEMY</span>
@@ -1588,7 +1601,7 @@
 
           <div class="hero-visual reveal">
             <div class="hero-visual-card">
-              <img src="assets/hero-students.png" alt="Triton Learning Academy Students">
+              <img src="assets/hero-students.png" alt="Triton Learning Academy Students" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80';}">
               <div class="hero-floating-stat">
                 <div class="hero-stat-circle">★</div>
                 <div class="hero-stat-info">
@@ -1729,22 +1742,50 @@
               <p class="program-desc">From pre-algebra fundamentals to advanced calculus and geometry proof techniques.</p>
             </div>
             <div class="program-card-body">
-              <ul class="program-features">
+              <ul class="program-features grid-2">
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Pre-Algebra, Algebra 1 &amp; Algebra 2
+                  Pre-Algebra
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Geometry, Trigonometry &amp; Precalculus
+                  Integrated Math 1
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Integrated Math 1, 2, 3 &amp; Statistics
+                  Algebra 1
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Homework Help &amp; Chapter Test Prep
+                  Integrated Math 2
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Algebra 2
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Integrated Math 3
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Geometry
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Pre-Calculus
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Trigonometry
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Calculus
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
+                  Statistics
                 </li>
               </ul>
               <div class="program-card-footer">
@@ -1753,30 +1794,26 @@
             </div>
           </div>
 
-          <!-- Program 2: AP Courses -->
+          <!-- Program 2: AP Economics & Statistics -->
           <div class="program-card" style="border-color:var(--pw-primary);">
             <div class="program-card-header" style="background:#FBFBFE;">
               <span class="program-badge badge-purple">College Board Credit</span>
-              <h3>Advanced Placement (AP®)</h3>
+              <h3>AP Economics &amp; Statistics</h3>
               <p class="program-desc">High-yield prep targeting top 5 scores on College Board AP examinations.</p>
             </div>
             <div class="program-card-body">
               <ul class="program-features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  AP Microeconomics &amp; Macroeconomics
+                  AP Microeconomics
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  AP Statistics &amp; Probability
+                  AP Macroeconomics
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  AP Calculus AB / BC Complete Review
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  FRQ Writing Drills &amp; Past Exam Series
+                  AP Statistics
                 </li>
               </ul>
               <div class="program-card-footer">
@@ -1789,26 +1826,22 @@
           <div class="program-card">
             <div class="program-card-header">
               <span class="program-badge badge-emerald">Practical CS Skills</span>
-              <h3>Computer Programming</h3>
+              <h3>Programming</h3>
               <p class="program-desc">Hands-on coding courses in Python, SQL, and practical data analysis.</p>
             </div>
             <div class="program-card-body">
               <ul class="program-features">
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Python Core &amp; Object-Oriented Logic
+                  Python
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  SQL Queries &amp; Relational Databases
+                  SQL
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Data Analytics &amp; Project Portfolio
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.74-5.25Z" clip-rule="evenodd" /></svg>
-                  Algorithmic Thinking for Contests
+                  Data Analytics
                 </li>
               </ul>
               <div class="program-card-footer">
@@ -2086,7 +2119,7 @@
     <div class="wrap footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo-mark.png" alt="Triton Learning Academy Logo" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/logo.png';}">
+          <img src="assets/logo.png" alt="Triton Learning Academy Logo" style="height:44px;width:44px;border-radius:50%;object-fit:cover;flex-shrink:0;">
           <span>TRITON LEARNING ACADEMY</span>
         </div>
         <p class="footer-about-text">
